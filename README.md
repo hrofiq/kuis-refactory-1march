@@ -6,6 +6,14 @@ Untuk running soal 07, perlu package 'nid'.
 
 ### Cara Install
 
-Cukup npm install aja.
+Clone repositorinya.
+
+       git clone https://github.com/hrofiq/kuis-refactory-1march
+
+Masuk ke direktori.
+
+       cd kuis-refactory-1march
+
+Cukup npm install saja.
 
        npm install

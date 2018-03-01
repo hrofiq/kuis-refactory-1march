@@ -1,0 +1,11 @@
+{
+    "name": "kuis-refactory-1march",
+    "version": "1.0.0",
+    "description": "",
+    "main": "",
+    "dependencies": {
+      "axios": "^0.3.2"
+    },
+    "author": "",
+    "license": "pribados"
+  }
