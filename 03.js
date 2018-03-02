@@ -40,4 +40,4 @@ final_result = result.sort((a,b) => {
                         })
                      .map(x => Object.assign({}, x, {price: convertToRupiah(x.price)}));
 
-console.log(JSON.stringify(final_result))
+console.log(final_result)

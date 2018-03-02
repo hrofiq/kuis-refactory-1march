@@ -27,10 +27,7 @@ class Str {
         return words.includes(...word)
     }
 
-    random(number) {
-        if (number === undefined ) {
-            number = 16
-        }
+    random(number = 16) {
         return nid(number)
     }
 

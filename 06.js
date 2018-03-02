@@ -1,4 +1,4 @@
-const lagu_doreaemon = `Aku ingin begini
+const lyrics = `Aku ingin begini
 Aku ingin begitu
 Ingin ini itu banyak sekali
 
@@ -18,30 +18,22 @@ Doraemon
 La... la... la...
 Aku sayang sekali`
 
-var array_lower = []
-const array_lagu = lagu_doreaemon.split(/[\n .]+/)
-                                 .forEach(x => array_lower.push(x.toLowerCase()))
+function count_word(text, word) {
+    let word_obj = {};
+    
+    if (typeof word === 'string') {
+        let re = new RegExp(word, 'gi');
+        word_obj[word] = text.match(re).length;
+    }
 
-const words = ['aku', 'ingin', 'dapat']
-
-var word_count = {
-    aku: 0,
-    ingin: 0,
-    dapat: 0
-}
-
-for (i of words) {
-    for(j of array_lower) {
-        if (i === j) {
-            word_count[i] += 1
+    else {
+        for (i of word) {
+            let re = new RegExp(i, 'gi');
+            word_obj[i] = text.match(re).length;
         }
     }
+    return word_obj;
 }
 
-function cetak(hasil) {
-    for (i in hasil) {
-        console.log(`Jumlah kata \"${i}\" adalah ${hasil[i]}`)
-    }
-}
-
-cetak(word_count)
+// dirunning
+console.log(count_word(lyrics, ['aku', 'ingin', 'dapat']));
